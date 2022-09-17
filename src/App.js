@@ -11,7 +11,6 @@ const [turn, setTurn] = useState('X');
 const [cells, setCells] = useState(Array(9).fill(''));
 const [winner, setWinner] = useState();
 const [clicked, setClicked] = useState(true)
-
 const { colorMode, toggleColorMode } = useColorMode();
 
 const checkForWinner = (squares) => {
@@ -71,7 +70,7 @@ return (
   align='center'
   w='100%'
   >
-    <Board turn={turn} winner={winner}/>
+    <Board turn={turn} winner={winner} />
     {winner && <Winner handleRestart={handleRestart} winner={winner} />}
     {clicked && <Elmodal setClicked={setClicked} winner={winner}/> }
     <HStack>
