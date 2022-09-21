@@ -94,7 +94,6 @@ return (
     >
       <IconButton
           icon={colorMode === 'light' ? <FaSun /> : <FaMoon />}
-          isRound='true'
           size='md'
           alignSelf='center'
           onClick={toggleColorMode}
