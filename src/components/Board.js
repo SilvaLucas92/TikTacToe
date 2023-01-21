@@ -1,35 +1,26 @@
-import React from 'react'
-import {Flex, Heading} from '@chakra-ui/react'
+import React from "react";
+import { Flex, Heading } from "@chakra-ui/react";
 
-const Board = ({ turn, winner }) => {
+const Board = ({ turn, winner, tie }) => {
   return (
-    <Flex
-    justify='center'
-    align='center'
-    direction='column'
-    >
+    <Flex justify="center" align="center" direction="column">
       <Heading
-       as='h1'
-       size='4xl'
-       m={5}
-       textAlign='center'
-       bgClip="text"
+        as="h1"
+        size="4xl"
+        m={5}
+        textAlign="center"
+        bgClip="text"
         bgGradient="linear(to-r, green.400,purple.500)"
-       >
-          Tic Tac Toe
+      >
+        Tic Tac Toe
       </Heading>
-      {!winner && (
-        <Heading
-       as='h3'
-       size='3x1'
-       m={2}
-       textAlign='left'
-       >
-        Turn: {turn}
-      </Heading>
+      {winner || tie ? null : (
+        <Heading as="h3" size="3x1" m={2} textAlign="left">
+          Turn: {turn}
+        </Heading>
       )}
     </Flex>
-  )
-}
+  );
+};
 
-export default Board
+export default Board;

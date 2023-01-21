@@ -6,7 +6,7 @@ const Elmodal = ({setClicked, winner}) => {
             setTimeout(() => {
                 setClicked(false)
             }, 2000)
-        }, []) 
+        }, [setClicked]) 
     
       return (
         <Box
